@@ -7,7 +7,7 @@ const Plans = () => {
     const checkIcon = <FontAwesomeIcon className="check-icon" icon={faCheck} />
     return (
         <div id="pricing" className="pricing-container">
-            <h1 className="section-title mb-4 mt-5 pt-4">Pricing</h1>
+            <h1 className="section-title mb-4 mt-5 pt-4">Plans</h1>
             <div className="row m-0">
                 <div className="col-md-6 col-lg-4">
                     <div className="pricing-card">
