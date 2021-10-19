@@ -1,0 +1,14 @@
+.footer {
+  background-color: rgb(47, 47, 47);
+  color: white;
+  padding: 25px;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+}
+
+.footer-p p {
+  color: white;
+  font-size: 18px;
+}

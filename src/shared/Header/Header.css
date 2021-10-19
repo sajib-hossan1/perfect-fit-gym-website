@@ -1,0 +1,47 @@
+.web-title {
+  color: rgb(255, 255, 255);
+}
+
+.navbar {
+  background-color: rgb(47, 47, 47);
+}
+
+.secondary-color {
+  color: rgb(241, 241, 42);
+}
+
+.avatar {
+  color: red !important;
+}
+
+.login-btn {
+  background-color: rgb(231, 231, 48);
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  color: white;
+  background-color: rgb(206, 206, 42);
+  transform: scale(1.02);
+}
+
+.logout-btn {
+  background-color: rgb(231, 231, 48);
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  color: white;
+  background-color: rgb(206, 206, 42);
+  transform: scale(1.02);
+}

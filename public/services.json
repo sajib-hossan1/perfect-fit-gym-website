@@ -1,0 +1,44 @@
+[
+    {
+        "id" : "1",
+        "serviceName" : "Trademil",
+        "type" : "Cardio",
+        "details" : "The treadmill is a hugely popular aerobic exercise machine. Aside from being a versatile cardio machine, a treadmill can help you lose weight if that’s your goal.In addition to helping you lose weight, working out on a treadmill has other benefits too. For instance: You can use the treadmill year-round.It’s possible to watch your favorite TV show while you exercise.The treadmill has handrails, which is ideal if you’re recovering from an injury.As with any heart-pumping cardio workout, it can help reduce your risk for heart disease and other chronic diseases, improve sleep, boost your mood, and improve brain function.Treadmills are available at almost every gym, making it an accessible option for all fitness levels. Plus, if you prefer working out at home, treadmills can easily become part of your home gym, too." ,
+        "image" : "https://i.ibb.co/qdrK6zx/img1.jpg"
+    },
+    {
+        "id" : "2",
+        "serviceName" : "Yoga",
+        "type" : "Cardio",
+        "details" : "Cardio yoga is a more intense version of traditional yoga, which is generally not thought of as cardio. It combines yoga-inspired and dynamic movements in various sequences to increase and sustain an elevated heart rate, helping train your heart and burn calories." ,
+        "image" : "https://i.ibb.co/FXgTQHv/img2.jpg"
+    },
+    {
+        "id" : "3",
+        "serviceName" : "Trainers",
+        "type" : "Helpful",
+        "details" : "Why would you hire a personal trainer or a coach? Isn’t that for pros and wannabe athletes? Not necessarily – the benefits of personal training extend beyond super goal-oriented athletes.Whether you’re someone who is just starting their fitness journey or a seasoned gym goer/recreational athlete with a solid fitness level, having a personal trainer or a coach can help you meet your fitness goals faster, safer and more effectively– or gain better results or simply learn to enjoy exercise more than you ever thought was possible." ,
+        "image" : "https://i.ibb.co/KbrpG20/img3.jpg"
+    },
+    {
+        "id" : "4",
+        "serviceName" : "Equipments",
+        "type" : "Strength",
+        "details" : "Despite the fact that kettlebells and bodyweight workouts might win the gym popularity contest right now, fitness pros agree: Not only are exercise machines totally fine to use, they might be especially helpful if you’re new to working out.“It’s true that if you’re using free weights, you have to recruit so many stabilizing muscles,” says Shannon Fable, certified trainer and programming director for Anytime Fitness. “But when you’re getting started, using selectorized equipment (the machines with weighted plates) and just learning the movement pattern is OK.” We have modern gym equipments that will help you to grow your healthy fitness" ,
+        "image" : "https://i.ibb.co/JHkF3Cn/img4.jpg"
+    },
+    {
+        "id" : "5",
+        "serviceName" : "Boxing",
+        "type" : "Strength",
+        "details" : "A boxer's training depends largely on the point in their career at which he or she is situated. If the boxer is just a beginner, a minimal training routine might consist of learning how to hit a heavy bag, a speed bag, or a double end bag (a small bag with a cord on top and bottom connecting it to the floor and ceiling) as well as doing shadowboxing in front of a mirror, skipping rope, calisthenics and jogging every day, as well as an occasional practice bout inside the ring (sparring). Most beginning boxers will spend most of their early careers conditioning and establishing the fundamentals. For the amateur or professional boxer preparing for a competition or bout, however, training is much more stringent. Boxing is widely considered one of the most physically demanding sports in the world" ,
+        "image" : "https://i.ibb.co/Wg31swg/img5.jpg"
+    },
+    {
+        "id" : "6",
+        "serviceName" : "Weight Lifting",
+        "type" : "Strength",
+        "details" : "Building and maintaining muscle is necessary for all of us, especially as we age. And the earlier we start, the better.According to the American Council on Exercise, most adults lose nearly a half pound of muscle per year starting around age 30, mostly because they aren’t as active as they were when they were younger. Losing muscle at the same time that metabolism starts to slow down is a recipe for weight gain and the health issues that can accompany it." ,
+        "image" : "https://i.ibb.co/FHCzf6j/img6.jpg"
+    }
+]

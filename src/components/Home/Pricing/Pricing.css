@@ -1,0 +1,62 @@
+.pricing-container {
+  margin: 0 3%;
+}
+
+.pricing-card {
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.534);
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.082);
+  transition: box-shadow 0.4s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.pricing-card:hover {
+  box-shadow: 10px 8px 40px rgba(0, 0, 0, 0.205);
+}
+
+.pricing-card h2 {
+  text-align: center;
+  color: rgb(16, 167, 255);
+}
+
+.pricing-card h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+.pricing-card h3 {
+  text-align: center;
+}
+
+.pricing-card span {
+  font-size: 20px;
+}
+
+.pricing-details {
+  margin-top: 20px;
+}
+
+.check-icon {
+  color: rgb(153, 255, 0);
+}
+
+.check-out-btn {
+  background-color: rgb(231, 231, 48);
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.check-out-btn:hover {
+  color: white;
+  background-color: rgb(206, 206, 42);
+  transform: scale(1.02);
+}

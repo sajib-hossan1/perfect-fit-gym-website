@@ -1,0 +1,40 @@
+.trainers-container {
+  margin-bottom: 50px;
+}
+
+.trainer-card {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.082);
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.trainer-card:hover {
+  box-shadow: 10px 8px 40px rgba(0, 0, 0, 0.205);
+}
+
+.trainer-card:hover img {
+  transform: scale(1.15);
+}
+
+.card-img {
+  width: 270px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 270px;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.trainer-social-media {
+  font-size: 30px;
+}
