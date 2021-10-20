@@ -9,10 +9,9 @@ const ServiceDetails = () => {
     const {services} = useServices();
 
     const serviceDetail = services.find( service => service.id === serviceId);
-    // console.log(serviceDetail);
 
     return (
-        <div>
+        <div className="detail-service-container">
             <div className="excercise-detail">
                 <h2>Excercise : {serviceDetail?.serviceName}</h2>
                 <h4>Excercise type : {serviceDetail?.type}</h4>

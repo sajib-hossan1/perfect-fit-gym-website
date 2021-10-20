@@ -36,5 +36,38 @@
 }
 
 .trainer-social-media {
-  font-size: 30px;
+  font-size: 35px;
+}
+
+.fb-icon {
+  color: #3b5998;
+  margin-right: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.fb-icon:hover {
+  color: #37528d;
+  transform: translateY(-5px);
+}
+
+.twitter-icon {
+  color: #00acee;
+  margin-right: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.twitter-icon:hover {
+  color: #00a2e2;
+  transform: translateY(-5px);
+}
+
+.youtube-icon {
+  color: #c4302b;
+  margin-right: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.youtube-icon:hover {
+  color: #b62520;
+  transform: translateY(-5px);
 }

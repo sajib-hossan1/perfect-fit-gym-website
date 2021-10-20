@@ -5,23 +5,60 @@ import './Login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import useAuth from '../../../hooks/useAuth';
+import { useState } from 'react';
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
+    // font awesome google icon
     const googleIcon = <FontAwesomeIcon icon={faGoogle} />
+
     
-    
-    const {signInUsingGoogle, processLogin,handleEmailChange,handlePasswordChange } = useAuth();
+    // firebase authentication
+    const {signInUsingGoogle, processLogin, error } = useAuth();
 
 
+
+    // set user's email and password values for log in
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    
+
+    // get email and password values for log in
+    const handleEmailChange = e => {
+      setEmail(e.target.value);
+    };
+
+    const handlePasswordChange = e => {
+      setPassword(e.target.value)
+    }
+
+
+    const handleLogin = e => {
+      e.preventDefault();
+      processLogin(email,password)
+    }
+
+
+    // redirect history for returning from log in page to where user came
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/shop';
+
+
+
+    // google sign in
     const handleGoogleSignIn = () => {
-      signInUsingGoogle();
+      signInUsingGoogle()
+      .then(result => {
+        history.push(redirect_uri)
+      })
     }
 
     return (
         <div className="log-in">
             <h1>Please LogIn</h1>
             <div>
-                <Form onSubmit={processLogin} className="w-25 mx-auto">
+                <Form onSubmit={handleLogin} className="w-25 mx-auto">
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={handleEmailChange} type="email" placeholder="Enter email" required/>
@@ -33,8 +70,9 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control onBlur={handlePasswordChange} type="password" placeholder="Password" required/>
                   </Form.Group>
+                  <p>{error}</p>
                   <Button className="btn btn-primary" type="submit">
-                    Submit
+                    Log In
                   </Button>
                 </Form>
                 <div className="text-center mt-4">

@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 
 
 const Header = () => {
-    const {user , logOut, photoURL} = useAuth();
+    const {user , logOut} = useAuth();
     return (
         <div id="home">
             <Navbar className="navbar" expand="lg" variant="dark" fixed="top">
@@ -23,10 +23,10 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/plans">Plans</Nav.Link>
                             <Nav.Link as={HashLink} to="/about">About Us</Nav.Link>
                         </Nav>
-                        <Nav className="ms-auto avatar">
+                        <Nav className="ms-auto">
                             <Nav.Link href="#avatarName">{user.displayName}</Nav.Link>
-                            <Nav.Link href="#avatarIMG">
-                                { user.displayName && <img src={photoURL} alt="Avatar-img" />}
+                            <Nav.Link className="p-0" href="#avatarIMG">
+                                { user.displayName && <img className="avatar-img" src={user.photoURL} alt="Avatar" />}
                             </Nav.Link>
                             {
                                 user.displayName ? <button onClick={logOut} className="logout-btn">Log Out</button> :

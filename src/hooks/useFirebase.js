@@ -11,41 +11,66 @@ const useFirebase = () => {
     const [isLoading, setisLoading] = useState(true);
 
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleNameChange = e => {
-        setName(e.target.value)
-    }
-
-    const handleEmailChange = e => {
-        setEmail(e.target.value);
-    }
-
-    const handlePasswordChange = e => {
-        setPassword(e.target.value);
-    }
-    
-
-
-    
+    // firebase auth
     const auth = getAuth();
+    
 
+    // sign in using google
     const signInUsingGoogle = () => {
         setisLoading(true)
         const googleProvider = new GoogleAuthProvider();
-
-        signInWithPopup(auth, googleProvider)
-        .then(result => {
-            setUser(result.user)
-        })
+        return signInWithPopup(auth, googleProvider)
         .catch(error => {
             setError(error.message)
         })
         .finally(() => setisLoading(false))
     }
 
+
+    // sign in existing user
+    const processLogin = (email, password) => {
+        signInWithEmailAndPassword(auth,email, password)
+        .then(userLogin => {
+            const user = userLogin.user;
+            setUser(user)
+            setError('')
+        })
+        .catch(error2 => {
+            const error = error2.message;
+            setError(error);
+        })
+    }
+
+
+    // register or creating a new user
+    const createNewUser = (name,email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+        .then(userCredential => {
+            const user = userCredential.user;
+            setUserName(name);
+            setError('');
+            console.log(user);
+        })
+        .catch(error => {
+            const errorMessage = error.message;
+            setError(errorMessage);
+        });
+    }
+
+
+    // set user name when user register
+    const setUserName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName : name
+        })
+        .then(result => {})
+        .catch(error => {
+            setError(error.message)
+        })
+    };
+
+
+    // sign out existing user
     const logOut = () => {
         setisLoading(true)
         signOut(auth)
@@ -58,43 +83,9 @@ const useFirebase = () => {
         .finally(() => setisLoading(false))
     }
 
-    const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth,email,password)
-        .then(userLogin => {
-            const user = userLogin.user;
-            setUser(user)
-            setError('')
-        })
-        .catch(error2 => {
-            const error = error2.message;
-            setError(error);
-        })
-    }
-
-    const setUserName = (name) => {
-        updateProfile(auth.currentUser, {
-            displayName : name
-        })
-        .then(result => {})
-        .catch(error => {
-            setError(error.message)
-        })
-    };
 
 
-    const createNewUser = (name, email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(userCredential => {
-            const user = userCredential.user;
-            setUserName(name);
-            setError('');
-        })
-        .catch(error => {
-            const errorMessage = error.message;
-            setError(errorMessage);
-        });
-    }
-
+    // signed in user observer
     useEffect( () => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if(user){
@@ -112,12 +103,9 @@ const useFirebase = () => {
         error,
         isLoading,
         signInUsingGoogle,
-        logOut,
         processLogin,
-        createNewUser,
-        handleNameChange,
-        handleEmailChange,
-        handlePasswordChange
+        logOut,
+        createNewUser
     }
 }
 
