@@ -42,7 +42,7 @@ const Login = () => {
     // redirect history for returning from log in page to where user came
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/shop';
+    const redirect_uri = location.state?.from || '/home';
 
 
 
